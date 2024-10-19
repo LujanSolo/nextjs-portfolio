@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Home, Github, Linkedin, Palette, Phone, Twitter, User, NotebookText } from 'lucide-react';
 
+
 const getIcon = (icon) => {
   switch (icon) {
     case "home":

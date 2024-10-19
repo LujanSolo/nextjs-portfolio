@@ -1,20 +1,21 @@
 "use client";
-import React from 'react';
-import { BtnList } from '@/app/data';
-import NavButton from './NavButton';
+import { BtnList } from "@/app/data";
+import React from "react";
+import NavButton from "./NavButton";
+
 
 const Navigation = () => {
 
   const angleIncrement = 360 / BtnList.length;
 
   return (
-    <div className="fixed h-screen flex items-center justify-center w-full">
-      <div className='flex items-center justify-between relative'>
+    <div className="w-full fixed h-screen flex items-center justify-center">
+      <div className="w-max flex items-center justify-center relative animate-spin">
         {
           BtnList.map((btn, index) => {
 
             const radianAngle = (index * angleIncrement * Math.PI) / 180;
-            const radius = 'calc(28vw - 1rem)';
+            const radius = 'calc(20vw - 1rem)';
             const x = `calc(${radius}*${Math.cos(radianAngle)})`;
             const y = `calc(${radius}*${Math.sin(radianAngle)})`;
 
