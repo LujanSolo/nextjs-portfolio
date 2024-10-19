@@ -1,11 +1,19 @@
 'use client';
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 
 export default function RedChair(props) {
-  const { nodes, materials } = useGLTF('/models/the_matrix_red_chesterfield_chair.glb')
+  const { nodes, materials } = useGLTF('/models/the_matrix_red_chesterfield_chair.glb');
+  
+  const chairModelRef = useRef();
+  useFrame((state, delta, xrFrame) => {
+    chairModelRef.current.position.y = Math.sin(state.clock.elapsedTime)*0.15;
+  });
+
   return (
     <group {...props} dispose={null}
+      ref={chairModelRef}
       rotation={[-5.875, 2.9, 0]}
       scale={1.75}
     >
