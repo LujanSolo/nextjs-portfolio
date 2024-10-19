@@ -33,7 +33,12 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
     <div className='absolute cursor-pointer z-50'
       style={{ transform: `translate(${x}, ${y})` }}
     >
-      <Link href={link} target={newTab ? '_blank' : '_self'} className='text-foreground rounded-full flex items-center justify-center' aria-label={label} name={label}>
+      <Link
+        href={link}
+        target={newTab ? '_blank' : '_self'}
+        className='text-foreground rounded-full flex items-center justify-center bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px]'
+        aria-label={label}
+        name={label}>
         <span className='relative w-16 h-16 p-4'>{getIcon(icon)}</span>
       </Link>
     </div>
