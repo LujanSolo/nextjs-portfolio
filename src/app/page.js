@@ -3,6 +3,7 @@ import Image from "next/image";
 import bg from '../../public/background/home-bg.jpg';
 import RenderModel from "./components/RenderModel";
 import RedChair from "./components/models/RedChair";
+import Navigation from "./components/navigation";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Image src={bg} alt='background image' fill className="w-full h-full object-cover object-center opacity-45" />
       
       <div className="w-full h-screen">
+        <Navigation />
         <RenderModel>
           <RedChair />
         </RenderModel>
