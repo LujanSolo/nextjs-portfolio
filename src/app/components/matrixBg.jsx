@@ -5,7 +5,7 @@ const createMatrixCode = () => ({
   id: Math.random(),
   top: `-${Math.random() * 100}%`,
   left: `${Math.random() * 100}%`,
-  speed: Math.random() * 25 + 5,
+  speed: Math.random() * 15 + 15,
   char: String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))  // Random katakana-like characters
 })
 
@@ -19,7 +19,7 @@ const MatrixBg = () => {
       setMatrixCode((prev) => [...prev, newCode]);
     };
 
-    const interval = setInterval(addCodeAtRandomInterval, 100);
+    const interval = setInterval(addCodeAtRandomInterval, 500);
     return () => clearInterval(interval);
   }, []);
 
@@ -28,11 +28,12 @@ const MatrixBg = () => {
       {
         matrixCode.map((code) => {
           return <div key={code.id}
-            className='absolute text-green-400 text-[20px] font-mono opacity-30'
+            className='absolute text-[14px] font-mono opacity-76'
             style={{
               top: code.top,
               left: code.left,
-              animation: `fall ${code.speed}s linear infinite`
+              color: '#00FF00',
+              animation: `fall ${code.speed}s linear infinite, colorShift ${code.speed}s linear infinite`,
             }}>
             {code.char}
           </div>

@@ -22,8 +22,26 @@
     transform: translateY(0);
     opacity: 1;
   }
-  100%{
+  50%{
     transform: translateY(100vh);
     opacity: 0;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    color: #07942dd1;
+  }
+  25% {
+    color: #006400;
+  }
+  50% {
+    color: #32779c;
+  }
+  75% {
+    color: #2bff00;
+  }
+  100% {
+    color: #7fffc8;
   }
 }
