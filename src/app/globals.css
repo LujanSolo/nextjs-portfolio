@@ -22,15 +22,15 @@
     transform: translateY(0);
     opacity: 1;
   }
-  50%{
-    transform: translateY(100vh);
+  100%{
+    transform: translateY(90vh);
     opacity: 0;
   }
 }
 
 @keyframes colorShift {
   0% {
-    color: #07942dd1;
+    color: #07942d;
   }
   25% {
     color: #006400;

@@ -5,7 +5,7 @@ const createMatrixCode = () => ({
   id: Math.random(),
   top: `-${Math.random() * 100}%`,
   left: `${Math.random() * 100}%`,
-  speed: Math.random() * 15 + 15,
+  speed: Math.random() * 5 + 5,
   char: String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))  // Random katakana-like characters
 })
 
@@ -16,19 +16,19 @@ const MatrixBg = () => {
   useEffect(() => {
     const addCodeAtRandomInterval = () => {
       const newCode = createMatrixCode();
-      setMatrixCode((prev) => [...prev, newCode]);
+      setMatrixCode((prev) => [...prev.slice(-49), newCode]);
     };
 
-    const interval = setInterval(addCodeAtRandomInterval, 500);
+    const interval = setInterval(addCodeAtRandomInterval, 100);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full bg-black overflow-hidden'>
+    <div className='fixed top-0 left-0 w-full h-full bg-black overflow-hidden -z-40'>
       {
         matrixCode.map((code) => {
           return <div key={code.id}
-            className='absolute text-[14px] font-mono opacity-76'
+            className='absolute text-[16px] font-mono'
             style={{
               top: code.top,
               left: code.left,
