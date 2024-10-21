@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from 'clsx';
-import MatrixBg from './components/matrixBg';
+import MatrixBg from '../components/matrixBg';
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
