@@ -10,7 +10,7 @@ export default function PowerCore(props) {
   const modelRef = useRef();
   
   useFrame(() => {
-    modelRef.current.rotation.y += 0.004;
+    modelRef.current.rotation.y += 0.0023;
   });
 
   
@@ -18,6 +18,7 @@ export default function PowerCore(props) {
     <group {...props} dispose={null}
       scale={[1.2, 1.2, 1.2]}
       ref={modelRef}
+      rotation={[.3,0,0]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
