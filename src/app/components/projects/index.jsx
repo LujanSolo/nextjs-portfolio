@@ -1,8 +1,14 @@
-
+import ProjectsLayout from './ProjectsLayout';
 
 const ProjectList = ({projects}) => {
   return (
-    <div>index</div>
+    <div> 
+      {
+        projects.map((project, index) => {
+          return <ProjectsLayout key={index} {...project} />
+        })
+      }
+    </div>
   )
 }
 

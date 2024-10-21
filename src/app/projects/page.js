@@ -4,9 +4,9 @@ import ProjectList from "../components/projects/index";
 import { projectsData } from "../data";
 
 
-export default function Home() {
+export default function Projects() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between relative">
+    <main className="flex min-h-screen flex-col items-center justify-center relative">
       <Image src={bg} alt='background image' fill className="-z-50 w-full h-full object-cover object-center opacity-50" />
       <ProjectList projects={projectsData} />
     </main>
