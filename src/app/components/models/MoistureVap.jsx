@@ -1,13 +1,25 @@
 'use client';
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 
 export default function MoistureVap(props) {
+  
   const { nodes, materials } = useGLTF('/models/star_wars_moisture_vaporator.glb')
+  const modelRef = useRef();
+  
+  useFrame(() => {
+    modelRef.current.rotation.y += 0.004;
+  })
+  
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null}
+      scale={[.7, .7, .7]}
+      position={[0, -.3, 0]}
+      ref={modelRef}
+    >
       <group 
-        position={[-1, -2, 0]}
+        position={[-1, 0, 0]}
         name="446a0984612248098cb711a3590c5216fbx" 
         scale={0.0075}
       >
