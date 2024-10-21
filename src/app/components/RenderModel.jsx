@@ -4,14 +4,14 @@ import { Canvas } from '@react-three/fiber';
 import clsx from 'clsx';
 import { Environment } from '@react-three/drei';
 
-const RenderModel = ({ children, className }) => {
+const RenderModel = ({ children, className, preset }) => {
   return (
     <Canvas
       className={clsx("w-screen h-screen relative -z-10", className)}>
       <Suspense fallback={null}>
         {children}
       </Suspense>
-      <Environment preset="dawn" />
+      <Environment preset={preset} />
     </Canvas>
   )
 };

@@ -12,7 +12,7 @@ export default function Home() {
       
       <div className="w-full h-screen">
         <Navigation />
-        <RenderModel>
+        <RenderModel preset="dawn">
           <RedChair />
         </RenderModel>
       </div>

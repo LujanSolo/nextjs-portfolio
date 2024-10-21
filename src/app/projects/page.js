@@ -14,7 +14,7 @@ export default function Projects() {
       <ProjectList projects={projectsData} />
 
       <div className="flex items-center justify-center fixed top-0 left-20 h-screen">
-        <RenderModel>
+        <RenderModel preset="sunset">
           <PowerCore />
         </RenderModel>
       </div>
