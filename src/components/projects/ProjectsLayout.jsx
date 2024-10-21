@@ -1,8 +1,12 @@
+import Link from 'next/link';
 import React from 'react';
 
 const ProjectsLayout = ({ name, description, date, demoLink }) => {
   return (
-    <div className="flex items-center justify-between w-full rounded-lg overflow-hidden p-6 custom-bg">
+    <Link
+      href={demoLink}
+      target={"_blank"}
+      className="flex items-center justify-center w-full rounded-lg overflow-hidden p-6 custom-bg">
       <div className="flex items-center justify-center space-x-2">
         <h2 className="text-foreground">{name}</h2>
         <p className="text-muted">{description}</p>
@@ -11,7 +15,7 @@ const ProjectsLayout = ({ name, description, date, demoLink }) => {
       <p className="text-foreground">
         {new Date(date).toDateString()}
       </p>
-    </div>
+    </Link>
   )
 }
 

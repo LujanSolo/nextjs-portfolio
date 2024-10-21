@@ -34,7 +34,7 @@ export const projectsData = [
   {
     id: 3,
     name: "Roman Numeral Converter",
-    description: "Convert numbers 1-3999 to Roman Numerals",
+    description: "Convert numbers to Roman Numerals",
     date: "2022-09-10",
     demoLink: "https://glistening-hamster-8e33e1.netlify.app/",
   },
@@ -54,13 +54,6 @@ export const projectsData = [
   },
   {
     id: 6,
-    name: "Impulse!",
-    description: "A 'classic' board game with zaney prizes.",
-    date: "2022-10-01",
-    demoLink: "https://impulse-the-game.herokuapp.com/",
-  },
-  {
-    id: 7,
     name: "Workday Scheduler",
     description: "Hourly planner",
     date: "2022-04-18",
