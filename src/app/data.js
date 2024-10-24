@@ -13,7 +13,7 @@ Websites:
   --muted: 115 115 115;
   --accent: 254 254 91; #FEFE5B
 }
-
+#FEFE5B
 */
 
 export const projectsData = [
