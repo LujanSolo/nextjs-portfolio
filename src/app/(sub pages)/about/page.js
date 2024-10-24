@@ -7,14 +7,23 @@ export default function About() {
   return (
     <>
 
-      <Image src={bg} alt='background image' className="-z-50 fixed w-full h-full object-cover object-center opacity-50" />
+      <Image src={bg} alt='background image' className="inset-0 -z-50 fixed w-full h-full object-cover object-center opacity-50" />
 
       <div className="w-full h-screen absolute top-1/2 -translate-y-1/2 left-0">
-        <RenderModel preset="sunset">
+        <RenderModel preset="park">
           <Holocron />
         </RenderModel>
+      </div>
+      
+      <div className="relative w-full h-screen flex flex-col items-center justify-center">
+        <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-x-1/2">
+          <h1 className="font-bold text-9xl text-accent">LujanSolo</h1>
+          <p className="font-light text-foreground text-lg">Take a glance at the coder behind the page...</p>
+        </div>
       </div>
 
     </>
   );
-}   
+}
+
+// apartment, city, dawn, forest, lobby, night, park, studio, sunset, warehouse

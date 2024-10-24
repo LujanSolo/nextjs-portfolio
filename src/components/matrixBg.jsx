@@ -16,7 +16,7 @@ const MatrixBg = () => {
   useEffect(() => {
     const addCodeAtRandomInterval = () => {
       const newCode = createMatrixCode();
-      setMatrixCode((prev) => [...prev.slice(-99), newCode]);
+      setMatrixCode((prev) => [...prev.slice(-49), newCode]);
     };
 
     const interval = setInterval(addCodeAtRandomInterval, 100);

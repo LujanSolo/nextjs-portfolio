@@ -28,7 +28,7 @@
   }
   100%{
     transform: translateY(90vh);
-    opacity: .05;
+    opacity: 0;
   }
 }
 
