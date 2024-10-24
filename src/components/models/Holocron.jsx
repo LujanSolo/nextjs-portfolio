@@ -6,24 +6,34 @@ Source: https://sketchfab.com/3d-models/jedi-holocron-4843940458cb48e18fa2cc7976
 Title: Jedi Holocron
 */
 "use client";
-import React, { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import React, { useRef, useEffect } from 'react';
+import { useGLTF, useAnimations } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 
-export default function Holocron (props) {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/jedi_holocron.glb')
-  const { actions } = useAnimations(animations, group)
+export default function Holocron(props) {
+  const group = useRef();
+  const { nodes, materials, animations } = useGLTF('/models/jedi_holocron.glb');
+  const { actions } = useAnimations(animations, group);
+
+  // Play the animation called "Animation"
+  useEffect(() => {
+    if (actions.Animation) {
+      actions.Animation.reset().play(); 
+    }
+
+    return () => {
+      if (actions.Animation) {
+        actions.Animation.stop(); 
+      }
+    };
+  }, [actions]);
 
   useFrame(() => {
-    group.current.rotation.y += 0.0023;
+    group.current.rotation.y -= 0.0023;
   });
 
   return (
-    <group ref={group} {...props} dispose={null}
-      rotation={[.3,0,.5]}
-      scale={[12,12,12]}
-    >
+    <group ref={group} {...props} dispose={null} rotation={[0, 0, 1]} scale={[8, 8, 8]}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={0.033}>
           <group name="root">
@@ -65,7 +75,8 @@ export default function Holocron (props) {
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/models/jedi_holocron.glb')
+useGLTF.preload('/models/jedi_holocron.glb');
+
