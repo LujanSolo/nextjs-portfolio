@@ -41,7 +41,7 @@ const AboutDetails = () => {
         </ItemLayout>
 
         <ItemLayout className={"col-span-full"}>
-          <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,react,ts,ae,apple,au,bootstrap,codepen,discord,express,figma,firebase,git,github,gitlab,gmail,graphql,heroku,ai,instagram,jest,jquery,linkedin,md,mongodb,mysql,netlify,nextjs,nodejs,notion,npm,ps,postgres,pr,pycharm,py,spring,sqlite,stackoverflow,supabase,sequelize,tailwind,threejs,twitter,vercel,visualstudio,vite,vitest,vscode,windows" alt="Lujan Solo's Github Stats" loading="lazy" />
+          <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,react,ts,ae,apple,au,bootstrap,codepen,discord,express,figma,firebase,git,github,gitlab,gmail,graphql,heroku,ai,instagram,jest,jquery,linkedin,md,mongodb,mysql,netlify,nextjs,nodejs,notion,npm,ps,postgres,pr,pycharm,py,spring,sqlite,stackoverflow,supabase,sequelize,tailwind,threejs,twitter,vercel,vite,vitest,vscode,windows" alt="Lujan Solo's Github Stats" loading="lazy" />
         </ItemLayout>
         
 
