@@ -39,6 +39,12 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-8 !p-0"}>
           <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=lujansolo&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="Lujan Solo's Github Stats" loading="lazy" />
         </ItemLayout>
+
+        <ItemLayout className={"col-span-full"}>
+          <img className="w-full h-auto" src="https://skillicons.dev/icons?i=js,html,css,react,ts,ae,apple,au,bootstrap,codepen,discord,express,figma,firebase,git,github,gitlab,gmail,graphql,heroku,ai,instagram,jest,jquery,linkedin,md,mongodb,mysql,netlify,nextjs,nodejs,notion,npm,ps,postgres,pr,pycharm,py,spring,sqlite,stackoverflow,supabase,sequelize,tailwind,threejs,twitter,vercel,visualstudio,vite,vitest,vscode,windows" alt="Lujan Solo's Github Stats" loading="lazy" />
+        </ItemLayout>
+        
+
       </div>
     </section>
   )
