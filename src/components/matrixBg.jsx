@@ -5,7 +5,7 @@ const createMatrixCode = () => ({
   id: Math.random(),
   top: `-${Math.random() * 100}%`,
   left: `${Math.random() * 100}%`,
-  speed: Math.random() * 5 + 5,
+  speed: Math.random() * 5 + 3,
   char: String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))  // Random katakana-like characters
 })
 
@@ -16,7 +16,7 @@ const MatrixBg = () => {
   useEffect(() => {
     const addCodeAtRandomInterval = () => {
       const newCode = createMatrixCode();
-      setMatrixCode((prev) => [...prev.slice(-49), newCode]);
+      setMatrixCode((prev) => [...prev.slice(-99), newCode]);
     };
 
     const interval = setInterval(addCodeAtRandomInterval, 100);
