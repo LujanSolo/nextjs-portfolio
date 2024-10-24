@@ -5,6 +5,9 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/jedi-holocron-4843940458cb48e18fa2cc79760c0114
 Title: Jedi Holocron
 */
+
+//* lighting options: apartment, city, dawn, forest, lobby, night, park, studio, sunset, warehouse
+
 "use client";
 import React, { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
