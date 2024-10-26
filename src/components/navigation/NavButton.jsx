@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Home, Github, Linkedin, Palette, Phone, Twitter, User, NotebookText } from 'lucide-react';
 import ResponsiveUI from '../ResponsiveUI';
+import clsx from 'clsx';
 
 
 const getIcon = (icon) => {
@@ -27,7 +28,7 @@ const getIcon = (icon) => {
   }
 }
 
-const NavButton = ({ x, y, label, link, icon, newTab }) => {
+const NavButton = ({ x, y, label, link, icon, newTab, labelSide="right" }) => {
   return (
     <ResponsiveUI>
       {
@@ -63,7 +64,7 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
                 <span className="relative w-10 h-10 xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent">
                   {getIcon(icon)}
                   <span className='peer bg-transparent absolute top-0 left-0 w-full h-full' />
-                  <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap">
+                  <span className={clsx("absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap", labelSide === "left" ? "right-full left-auto" : "")}>
                     {label}
                   </span>
                 </span>

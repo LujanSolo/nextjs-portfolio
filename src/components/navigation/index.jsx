@@ -35,24 +35,14 @@ const Navigation = () => {
                 <div className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-start xs:items-center justify-center relative group">
                   {
                     BtnList.slice(0, BtnList.length / 2).map((btn, index) => {
-                      const radianAngle = (index * angleIncrement * Math.PI) / 180;
-                      const radius = isLarge ? 'calc(20vw - 1rem)' : isMedium ? 'calc(30vw - 1rem)' : 'calc(40vw - 1rem)';
-                      const x = `calc(${radius}*${Math.cos(radianAngle)})`;
-                      const y = `calc(${radius}*${Math.sin(radianAngle)})`;
-
-                      return <NavButton key={btn.label} x={x} y={y} {...btn} />
+                      return <NavButton key={btn.label} x={0} y={0} {...btn} />
                     })
                   }
                 </div>
                 <div className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group">
                   {
                     BtnList.slice(BtnList.length/2, BtnList.length).map((btn, index) => {
-                      const radianAngle = (index * angleIncrement * Math.PI) / 180;
-                      const radius = isLarge ? 'calc(20vw - 1rem)' : isMedium ? 'calc(30vw - 1rem)' : 'calc(40vw - 1rem)';
-                      const x = `calc(${radius}*${Math.cos(radianAngle)})`;
-                      const y = `calc(${radius}*${Math.sin(radianAngle)})`;
-
-                      return <NavButton key={btn.label} x={x} y={y} {...btn} />
+                      return <NavButton key={btn.label} x={0} y={0} {...btn} labelSide="left" />
                     })
                   }
                 </div>
