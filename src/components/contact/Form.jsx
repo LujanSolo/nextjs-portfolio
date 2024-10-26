@@ -42,8 +42,6 @@ export default function Form() {
     sendEmail(templateParams);
   };
 
-  console.log(errors);
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}
       className="max-w-md w-full flex flex-col items-center justify-center space-y-4"

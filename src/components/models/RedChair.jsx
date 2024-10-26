@@ -15,7 +15,7 @@ export default function RedChair(props) {
     <group {...props} dispose={null}
       ref={chairModelRef}
       rotation={[-5.875, 2.9, 0]}
-      scale={1.23}
+      scale={2.1}
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.677}>
         <group rotation={[Math.PI / 2, 0, 0]}>
