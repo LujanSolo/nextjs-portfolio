@@ -24,7 +24,7 @@ const MatrixBg = () => {
   }, []);
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full bg-black overflow-hidden -z-40'>
+    <div className='fixed top-0 left-0 w-full h-full bg-black overflow-hidden -z-50'>
       {
         matrixCode.map((code) => {
           return <div key={code.id}

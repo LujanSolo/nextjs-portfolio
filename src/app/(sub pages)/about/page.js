@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import bg from '../../../../public/background/about-bg.jpg';
 import RenderModel from '../../../components/RenderModel';
@@ -29,4 +30,3 @@ export default function About() {
   );
 }
 
-// apartment, city, dawn, forest, lobby, night, park, studio, sunset, warehouse

@@ -10,10 +10,10 @@ const Navigation = () => {
   const angleIncrement = 360 / BtnList.length;
   const size = useScreenSize();
   const isLarge = size >= 1024;
-  const isMedium = size >= 768 && size < 1024;
+  const isMedium = size >= 768;
 
   return (
-    <div className="w-full fixed h-screen flex items-center justify-center">
+    <div className="w-full fixed h-screen flex items-center justify-center z-20">
       <ResponsiveUI>
         {
           ({ size }) => {

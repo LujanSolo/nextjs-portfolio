@@ -36,7 +36,7 @@ export default function Holocron(props) {
   });
 
   return (
-    <group ref={group} {...props} dispose={null} rotation={[0, 0, 1]} scale={[8, 8, 8]}>
+    <group ref={group} {...props} dispose={null} rotation={[0, 0, 1]} scale={[12, 12, 12]}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={0.033}>
           <group name="root">
