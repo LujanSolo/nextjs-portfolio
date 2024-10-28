@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import Sound from '@/components/Sound';
 import dynamic from "next/dynamic";
 
-const MatrixBg = dynamic(()=> import("../components/MatrixBg"), {ssr: false} );
+const MatrixBg = dynamic(()=> import("../components/MatrixBg.jsx"), {ssr: false} );
 
 const inter = Inter({
   subsets: ["latin"],
