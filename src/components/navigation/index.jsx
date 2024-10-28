@@ -26,7 +26,7 @@ const Navigation = () => {
   const isMedium = size >= 768;
 
   return (
-    <div className="w-full fixed h-screen flex items-center justify-center z-20">
+    <div className="w-full fixed h-screen flex items-center justify-center z-10">
       <ResponsiveUI>
         {
           ({ size }) => {

@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         {children}
         <MatrixBg />
         <Sound />
+        <div id="modal-root" />
       </body>
     </html>
   );
