@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemLayout from './ItemLayout';
-
+// import Link from "next/link";
 
 const AboutDetails = () => {
   return (
@@ -33,11 +33,17 @@ const AboutDetails = () => {
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-4 !p-0"}>
-          <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lujansolo&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="Lujan Solo's Github Stats" loading="lazy" />
+          <img className="w-full h-auto" 
+          src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=lujansolo&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`} 
+          alt="Lujan Solo's Github Stats" 
+          loading="lazy" />
         </ItemLayout>
 
+      
+
         <ItemLayout className={"col-span-full md:col-span-8 !p-0"}>
-          <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=lujansolo&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="Lujan Solo's Github Stats" loading="lazy" />
+          <img className="w-full h-auto" 
+          src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=lujansolo&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`} alt="Lujan Solo's Github Stats" loading="lazy" />
         </ItemLayout>
 
         <ItemLayout className={"col-span-full"}>
@@ -45,11 +51,15 @@ const AboutDetails = () => {
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
-          <img className="w-full h-auto" src="https://github-readme-streak-stats.herokuapp.com?user=Lujansolo&theme=javascript-dark&hide_border=true&type=png&ring=FEFE5B&background=EB545400&currStreakLabel=FEFE5B" alt="LujanSolo's GitHub Streak" loading="lazy" />
+          <img className="w-full h-auto" 
+          
+          src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=Lujansolo&theme=javascript-dark&hide_border=true&type=png&ring=FEFE5B&background=EB545400&currStreakLabel=FEFE5B`} 
+          alt="LujanSolo's GitHub Streak" 
+          loading="lazy" />
         </ItemLayout>
-
+    
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
-          <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/pin/?username=lujansolo&repo=employee-tracker&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2" alt="Lujan Solo's Github Stats" loading="lazy" />
+          <img className="w-full h-auto" src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/pin/?username=lujansolo&repo=employee-tracker&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2`} alt="Lujan Solo's Github Stats" loading="lazy" />
         </ItemLayout>
 
       </div>
