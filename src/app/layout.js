@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from 'clsx';
-import MatrixBg from '@/components/MatrixBg';
+import MatrixBg from '../components/MatrixBg';
 import Sound from '@/components/Sound';
 
 const inter = Inter({
