@@ -9,7 +9,7 @@ const createMatrixCode = () => ({
   char: String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))  // Random katakana-like characters
 })
 
-const MatrixBg = () => {
+const MatrixBackground = () => {
 
   const [matrixCode, setMatrixCode] = useState([]);
 
@@ -43,4 +43,4 @@ const MatrixBg = () => {
   )
 }
 
-export default MatrixBg;
+export default MatrixBackground;

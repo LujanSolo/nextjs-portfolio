@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from 'clsx';
-import MatrixBg from '@/components/MatrixBg';
+import MatrixBackground from '@/components/MatrixBackground';
 import Sound from '@/components/Sound';
 // import dynamic from "next/dynamic";
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={clsx(inter.variable, "bg-background text-foreground font-inter")}>
         {children}
-        <MatrixBg />
+        <MatrixBackground />
         <Sound />
         <div id="modal-root" />
       </body>
