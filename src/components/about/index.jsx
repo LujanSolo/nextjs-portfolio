@@ -11,9 +11,10 @@ const AboutDetails = () => {
             Campaigner for Technology
           </h1>
           <p className="font-light text-xs sm:text-sm md:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eaque cumque ea quam, itaque reiciendis sequi. Error laudantium, explicabo porro esse libero inventore, voluptatem aut repudiandae, vero fuga magnam ipsa.<br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eaque cumque ea quam, itaque reiciendis sequi. Error laudantium, explicabo porro esse libero inventore, voluptatem aut repudiandae, vero fuga magnam ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eaque cumque ea quam, itaque reiciendis sequi. Error laudantium, explicabo porro esse libero inventore, voluptatem aut repudiandae, vero fuga magnam ipsa.<br />
-            Error laudantium, explicabo porro esse libero inventore, voluptatem aut repudiandae, vero fuga magnam ipsa.
+            In a world where creativity meets technology, a theater graduate with over 20 years of experience in film and television emerges as a guiding force. LujanSolo has directed short films, captivated audiences on stage, and lent his voice to shows and podcasts. His work in Hollywood feature films and theater showcases a rich tapestry of artistic achievement.
+            <br />
+            <br />
+            Moving into the realm of coding, he now empowers new students in full-stack development, simplifying complex concepts with simplified examples. His passion for continuous learning fuels an endless quest for knowledge. Dogged-determination and an unyielding spirit drive his every endeavor, making this coder-storyteller uniquely positioned to aid you in your task.
           </p>
         </ItemLayout>
 

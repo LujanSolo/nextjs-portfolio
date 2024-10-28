@@ -6,7 +6,7 @@ import Navigation from "../components/navigation";
 
 import dynamic from "next/dynamic";
 
-const RedChair = dynamic(()=> import("@/components/models/RedChair"), {ssr: false} );
+const RedChair = dynamic(() => import("@/components/models/RedChair"), { ssr: false });
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
