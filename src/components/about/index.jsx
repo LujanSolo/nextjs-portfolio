@@ -20,7 +20,7 @@ const AboutDetails = () => {
 
         <ItemLayout className={"col-span-full lg:col-span-4 text-accent flex"}>
           <p className="font-semibold w-full lg:text-left text-2xl sm:text-5xl text-center">
-            100's <sub className="font-semibold text-base">of students taught</sub>
+            100`&apos;`s <sub className="font-semibold text-base">of students taught</sub>
           </p>
         </ItemLayout>
 
