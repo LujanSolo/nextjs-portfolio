@@ -22,13 +22,13 @@ const AboutDetails = () => {
           </p>
         </ItemLayout>
 
-        <ItemLayout className={"col-span-full xs:col-span-6 lg:col-span-4 text-accent flex"}>
+        <ItemLayout className={"col-span-full lg:col-span-4 text-accent flex"}>
           <p className="font-semibold w-full lg:text-left text-2xl sm:text-5xl text-center">
             100's <sub className="font-semibold text-base">of students taught</sub>
           </p>
         </ItemLayout>
 
-        <ItemLayout className={"col-span-full xs:col-span-6 lg:col-span-4 text-accent flex"}>
+        <ItemLayout className={"col-span-full lg:col-span-4 text-accent flex"}>
           <p className="font-semibold w-full lg:text-left text-center text-2xl sm:text-5xl">
             3+ <sub className="font-semibold text-base">yrs of coding experience</sub>
             <br />
@@ -36,7 +36,7 @@ const AboutDetails = () => {
           </p>
         </ItemLayout>
 
-        <ItemLayout className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}>
+        <ItemLayout className={"col-span-full md:col-span-4 !p-0"}>
           <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lujansolo&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="Lujan Solo's Github Stats" loading="lazy" />
         </ItemLayout>
 
