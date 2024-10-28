@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Volume2, VolumeX } from 'lucide-react';
+import { Volume1, VolumeX } from 'lucide-react';
 import { createPortal } from 'react-dom';
 
 const Modal = ({ onClose, toggle }) => {
@@ -38,8 +38,8 @@ const Sound = () => {
   useEffect(() => {
     const consent = localStorage.getItem("playConsent");
     const consentTimestamp = localStorage.getItem("consentTimestamp");
-    if (consent && consentTimestamp && 
-      new Date(consentTimestamp).getTime() + 3*24*60*60*1000 > new Date()
+    if (consent && consentTimestamp &&
+      new Date(consentTimestamp).getTime() + 3 * 24 * 60 * 60 * 1000 > new Date()
     ) {
       setIsPlaying(consent === "true");
 
@@ -80,7 +80,7 @@ const Sound = () => {
     >
       {
         isPlaying ?
-          <Volume2 className="w-full h-full text-foreground group-hover:text-accent" strokeWidth={1.5} />
+          <Volume1 className="w-full h-full text-foreground group-hover:text-accent" strokeWidth={1.5} />
           :
           <VolumeX className="w-full h-full text-foreground group-hover:text-accent" strokeWidth={1.5} />
       }
