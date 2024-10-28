@@ -3,7 +3,7 @@ import "./globals.css";
 import clsx from 'clsx';
 import MatrixBg from '@/components/MatrixBg';
 import Sound from '@/components/Sound';
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 // const MatrixBg = dynamic(()=> import("../components/MatrixBg.jsx"), {ssr: false} );
 
