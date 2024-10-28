@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Home, Github, Linkedin, Palette, Phone, Twitter, User, NotebookText } from 'lucide-react';
 import ResponsiveUI from '../ResponsiveUI';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 
 const getIcon = (icon) => {
@@ -28,7 +29,14 @@ const getIcon = (icon) => {
   }
 }
 
-const NavButton = ({ x, y, label, link, icon, newTab, labelSide="right" }) => {
+const item = {
+  hidden: { scale: 0 },
+  show: { scale: 1 }
+};
+
+const NavLink = motion(Link);
+
+const NavButton = ({ x, y, label, link, icon, newTab, labelSide = "right" }) => {
   return (
     <ResponsiveUI>
       {
@@ -37,7 +45,8 @@ const NavButton = ({ x, y, label, link, icon, newTab, labelSide="right" }) => {
             <div className='absolute cursor-pointer z-50'
               style={{ transform: `translate(${x}, ${y})` }}
             >
-              <Link
+              <NavLink
+                variants={item}
                 href={link}
                 target={newTab ? '_blank' : '_self'}
                 className="text-foreground rounded-full flex items-center justify-center custom-bg"
@@ -51,11 +60,12 @@ const NavButton = ({ x, y, label, link, icon, newTab, labelSide="right" }) => {
                   </span>
                 </span>
 
-              </Link>
+              </NavLink>
             </div>
             :
             <div className='cursor-pointer z-50'>
-              <Link
+              <NavLink
+                variants={item}
                 href={link}
                 target={newTab ? '_blank' : '_self'}
                 className="text-foreground rounded-full flex items-center justify-center custom-bg-alt"
@@ -68,7 +78,7 @@ const NavButton = ({ x, y, label, link, icon, newTab, labelSide="right" }) => {
                     {label}
                   </span>
                 </span>
-              </Link>
+              </NavLink>
             </div>
         }
       }
