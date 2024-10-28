@@ -1,17 +1,19 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Volume2, VolumeX } from 'lucide-react';
 
 const Sound = () => {
+  const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const toggle = () => {
     setIsPlaying(!isPlaying);
+    !isPlaying ? audioRef.current.play() : audioRef.current.pause();
   };
 
   return (<div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
-    <audio loop>
+    <audio ref={audioRef} loop>
       <source src={"/audio/birdsong.mp3"} type="audio/mpeg" />
       Your web browser does not support audio.
     </audio>
