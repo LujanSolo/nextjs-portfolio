@@ -1,11 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from 'clsx';
-// import MatrixBg from '../components/MatrixBg';
+import MatrixBg from '@/components/MatrixBg';
 import Sound from '@/components/Sound';
 import dynamic from "next/dynamic";
 
-const MatrixBg = dynamic(()=> import("../components/MatrixBg.jsx"), {ssr: false} );
+// const MatrixBg = dynamic(()=> import("../components/MatrixBg.jsx"), {ssr: false} );
 
 const inter = Inter({
   subsets: ["latin"],
