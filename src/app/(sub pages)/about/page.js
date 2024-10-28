@@ -1,15 +1,16 @@
-
 import Image from "next/image";
 import bg from '../../../../public/background/about-bg.jpg';
 import RenderModel from '../../../components/RenderModel';
-import Holocron from "../../../components/models/Holocron";
+// import Holocron from "../../../components/models/Holocron";
 import AboutDetails from "../../../components/about";
+import dynamic from "next/dynamic";
 
+const Holocron = dynamic(()=> import("@/components/models/Holocron"), {ssr: false} );
 export default function About() {
   return (
     <>
 
-      <Image src={bg} alt='background image' className="inset-0 -z-50 fixed w-full h-full object-cover object-center opacity-50" />
+      <Image priority sizes="100vw"src={bg} alt='background image' className="inset-0 -z-50 fixed w-full h-full object-cover object-center opacity-50" />
 
       <div className="w-full h-3/5 xs:h-3/4 sm:h-screen absolute top-1/2 -translate-y-1/2 left-0">
         <RenderModel preset="park">

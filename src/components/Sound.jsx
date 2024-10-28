@@ -37,8 +37,10 @@ const Sound = () => {
 
   useEffect(() => {
     const consent = localStorage.getItem("playConsent");
-
-    if (consent) {
+    const consentTimestamp = localStorage.getItem("consentTimestamp");
+    if (consent && consentTimestamp && 
+      new Date(consentTimestamp).getTime() + 3*24*60*60*1000 > new Date()
+    ) {
       setIsPlaying(consent === "true");
 
       if (consent === "true") {
@@ -56,6 +58,7 @@ const Sound = () => {
     setIsPlaying(!isPlaying);
     newState ? audioRef.current.play() : audioRef.current.pause();
     localStorage.setItem("playConsent", String(!isPlaying));
+    localStorage.setItem("consentTimestamp", new Date().toISOString());
     setShowModal(false);
   };
 

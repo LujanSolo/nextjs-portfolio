@@ -3,7 +3,10 @@ import bg from '../../../../public/background/projects-bg.jpg';
 import ProjectList from "../../../components/projects/index";
 import { projectsData } from "../../data";
 import RenderModel from '../../../components/RenderModel';
-import PowerCore from "../../../components/models/PowerCore";
+// import PowerCore from "@/components/models/PowerCore";
+import dynamic from "next/dynamic";
+
+const PowerCore = dynamic(()=> import("@/components/models/PowerCore"), {ssr: false} );
 
 export default function Projects() {
   return (
