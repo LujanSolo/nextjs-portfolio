@@ -2,7 +2,25 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from "@emailjs/browser";
-import { Toaster, toast } from 'sonner'
+import { Toaster, toast } from 'sonner';
+import { motion } from 'framer-motion';
+
+const item = {
+  hidden: { scale: 0 },
+  show: { scale: 1 }
+};
+
+const container = {
+  hidden: {opacity: 0},
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      delayChildren: 1.5,
+    }
+  }
+};
+
 
 export default function Form() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -53,10 +71,15 @@ export default function Form() {
   return (
     <>
       <Toaster richColors="true" />
-      <form onSubmit={handleSubmit(onSubmit)}
+      <motion.form 
+        variants={container}
+        initial='hidden'
+        animate='show'
+      
+      onSubmit={handleSubmit(onSubmit)}
         className="max-w-md w-full flex flex-col items-center justify-center space-y-4"
       >
-        <input type="text" placeholder="name" {...register("name", {
+        <motion.input variants={item} type="text" placeholder="name" {...register("name", {
           required: "name required...",
           minLength: {
             value: 1,
@@ -68,7 +91,7 @@ export default function Form() {
         {
           errors.name && <span className="inline-block self-start text-accent">{errors.name.message}</span>
         }
-        <input type="email" placeholder="email" {...register("email", {
+        <motion.input  variants={item}type="email" placeholder="email" {...register("email", {
           required: "email required...",
           pattern: {
             value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
@@ -80,7 +103,7 @@ export default function Form() {
         {
           errors.email && <span className="inline-block self-start text-accent">{errors.email.message}</span>
         }
-        <textarea placeholder='message' {...register("message", {
+        <motion.textarea variants={item} placeholder='message' {...register("message", {
           required: "please enter a message...",
           maxLength: {
             value: 1500,
@@ -96,10 +119,10 @@ export default function Form() {
         {
           errors.message && <span className="inline-block self-start text-accent">{errors.message.message}</span>
         }
-        <input type="submit" value="Transmit Message"
+        <motion.input variants={item} type="submit" value="Transmit Message"
           className='px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer'
         />
-      </form>
+      </motion.form>
     </>
 
   );
