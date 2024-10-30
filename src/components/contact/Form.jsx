@@ -86,7 +86,7 @@ export default function Form() {
             message: "Name field is empty..."
           }
         })}
-          className="w-full p-2 rounded-md shadlow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg-alt"
+          className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg-alt"
         />
         {
           errors.name && <span className="inline-block self-start text-accent">{errors.name.message}</span>
